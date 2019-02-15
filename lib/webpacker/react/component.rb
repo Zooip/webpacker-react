@@ -10,7 +10,7 @@ module Webpacker
         @name = name
       end
 
-      def render(props = {}, options = {})
+      def render(props = {}, options = {}, &block)
         tag = options.delete(:tag) || :div
         data = { data: { "react-class" => @name, "react-props" => props.to_json } }
 
